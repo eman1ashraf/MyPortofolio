@@ -380,6 +380,10 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: var(--transition);
+             text-decoration: none;
+             color: inherit;
+
+
         }
 
         .project-card:hover {
@@ -388,14 +392,28 @@
         }
 
         .project-image {
-            height: 200px;
-            background-color: #ddd;
+            height: 220px;
+            background-color: #f06c14;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--primary-color);
             font-size: 1.5rem;
             font-weight: 600;
+            overflow: hidden;
+            width: 100%;
+        }
+         .project-image img {
+           
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 600;
+            overflow: hidden;
+            width: 100%;
         }
 
         .project-content {
@@ -486,6 +504,23 @@
         .footer-social a:hover {
             color: var(--primary-color);
         }
+        .keywords {
+    margin-top: 15px;
+}
+.keywords span {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin: 3px;
+    transition: var(--transition);
+}
+.keywords span:hover {
+    background: var(--secondary-color);
+}
+
 
         /* Responsive Design */
         @media (max-width: 992px) {
@@ -704,6 +739,7 @@
                         <li>Hard Working</li>
                         <li>Problem Solving</li>
                         <li>Good Presentation</li>
+                        <li>Adaptability</li>
                     </ul>
                 </div>
             </div>
@@ -718,52 +754,80 @@
             <div class="services-container">
                 <div class="service-card">
                     <i class="fas fa-mobile-alt"></i>
-                    <h3>Mobile App Development</h3>
-                    <p>Building cross-platform mobile applications using Flutter for both Android and iOS platforms.</p>
+                    <h3>Mobile App Development (Flutter)</h3>
+                    <p>Build cross-platform mobile applications with smooth performance and modern design.</p>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>UI/UX Design</h3>
-                    <p>Creating intuitive and visually appealing user interfaces that enhance user experience.</p>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Native Android Development</h3>
+                    <p>Develop Android apps using Kotlin when native performance is required</p>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Backend Development</h3>
-                    <p>Developing robust backend systems using Node.js, Express, and MongoDB for data management.</p>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Web Development</h3>
+                    <p>Create lightweight, responsive websites tailored to clients’ needs</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-container">
-                <div class="project-card">
-                    <div class="project-image">Project Image</div>
-                    <div class="project-content">
-                        <h3>E-commerce Mobile App</h3>
-                        <p>A full-featured e-commerce application built with Flutter and Firebase, featuring user authentication, product catalog, shopping cart, and payment integration.</p>
+ <!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-container">
+
+            <!-- Metro App -->
+            <a href="https://github.com/KarolHany/Yalla_Metro_App" target="_blank" class="project-card">
+                <div class="project-image"><img src="images/m1.jpg" alt="Metro App"></div>
+                <div class="project-content">
+                    <h3>Metro App using Flutter</h3>
+                    <p>Developed a smooth, responsive Flutter application that helps users find optimal metro routes, check real-time schedules, view station maps, and manage tickets. Implemented offline caching for route data and integrated location services for step-by-step navigation.</p>
+                    <div class="keywords">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>Firebase</span>
+                        <span>Google Maps API</span>
+                        <span>Offline Caching</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">Project Image</div>
-                    <div class="project-content">
-                        <h3>Weather App</h3>
-                        <p>A weather application that provides real-time weather data and forecasts using a weather API, built with Kotlin for Android.</p>
+            </a>
+
+            <!-- Recipe App -->
+            <a href="https://github.com/Evil-Knight1/iti-android-project" target="_blank" class="project-card">
+                <div class="project-image"><img src="images/r4.jpg" alt="Recipe App"></div>
+                <div class="project-content">
+                    <h3>Recipe App using Kotlin</h3>
+                    <p>Created a native Android application in Kotlin that lets users discover recipes by category or ingredient, save favorites offline, and follow guided cooking steps with timers and ingredient checklists. Implemented local persistence and sync with a backend for user-generated content.</p>
+                    <div class="keywords">
+                        <span>Kotlin</span>
+                        <span>Android</span>
+                        <span>Room Database</span>
+                        <span>Retrofit</span>
+                        <span>MVVM</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">Project Image</div>
-                    <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>A productivity app that helps users organize tasks, set reminders, and track progress, developed with Flutter and SQLite.</p>
+            </a>
+
+            <!-- E-commerce Website -->
+            <a href="https://github.com/eman1ashraf/iti-project" target="_blank" class="project-card">
+                <div class="project-image"><img src="images/q2.png" alt="E-commerce Website"></div>
+                <div class="project-content">
+                    <h3>E-commerce Website using Angular</h3>
+                    <p>Built an Angular single-page application for an online store with a dynamic product catalog, category filtering, user authentication, cart management, and a secure checkout flow. Focused on performance, accessibility, and a mobile-first responsive design.</p>
+                    <div class="keywords">
+                        <span>Angular</span>
+                        <span>TypeScript</span>
+                        <span>REST API</span>
+                        <span>Authentication</span>
+                        <span>Responsive Design</span>
                     </div>
                 </div>
-            </div>
+            </a>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact">
